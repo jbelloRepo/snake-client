@@ -75,3 +75,7 @@ For more detailed instructions on setting up and running the Snake server, pleas
   - Send a message when a client leaves.
 
 
+## Acknowledgment
+
+Our server code for this game was not written from scratch. It is a heavily modified version of the single-player game Snek created by [Tania Rascia](https://www.taniarascia.com). We would like to express our gratitude to Tania Rascia for providing the initial codebase that served as the foundation for our multiplayer implementation.
+
