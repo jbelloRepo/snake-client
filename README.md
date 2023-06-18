@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="snek.gif" alt="Timer Animation" width="200" height="200" />
+</p>
+
 # Snake Client Project
 
 Snake game is a very popular video game where the player maneuvers a dot and grows it by eating pieces of food. As the snake moves and eats, it grows in size and becomes an obstacle to smooth maneuvers. The goal is to grow the snake as big as possible without bumping into the walls or itself, which leads to the game ending.
