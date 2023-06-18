@@ -25,6 +25,8 @@ const handleUserInput = function (key) {
     connection.write("Move: down");
   } else if (key === "d") {
     connection.write("Move: right");
+  } else if (key === "q") {
+    connection.write("Say: Hello, world!"); // Send the say message to the server
   }
 };
 
