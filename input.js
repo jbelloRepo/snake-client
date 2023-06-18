@@ -1,7 +1,7 @@
 // Stores the active TCP connection object.
 let connection;
 
-const setupInput = function (conn) {
+const setupInput = function(conn) {
   connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
@@ -13,7 +13,7 @@ const setupInput = function (conn) {
   return stdin;
 };
 
-const handleUserInput = function (key) {
+const handleUserInput = function(key) {
   if (key === "\u0003") {
     // Check for Ctrl + C input
     process.exit(); // Terminate the game
