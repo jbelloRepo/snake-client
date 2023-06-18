@@ -13,4 +13,9 @@ const connect = function() {
 };
 
 console.log("Connecting ...");
-connect();
+const sConn = connect();
+
+sConn.on("data", (data) => {
+  console.log("Server says: ", data);
+});
+
