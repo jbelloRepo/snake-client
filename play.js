@@ -10,4 +10,4 @@ sConn.on("data", (data) => {
   console.log("Server says:", data);
 });
 
-setupInput();
+setupInput(sConn);
