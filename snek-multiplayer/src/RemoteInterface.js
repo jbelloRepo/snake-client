@@ -14,6 +14,7 @@ class RemoteInterface {
   constructor() {
     this.clients = [];
     this.launchServer();
+    this.playerCount = 0; // play count variable
   }
 
   launchServer() {
@@ -62,6 +63,10 @@ class RemoteInterface {
 
     // Broadcast a message to all connected clients
     this.broadcast(`${client.remoteAddress} has joined the game!`);
+
+    //broadcast player count:
+    this.playerCount++;
+    console.log(`Player connected. Total players: ${this.playerCount}`);
   }
 
   handleClientData(client, data) {
@@ -74,6 +79,14 @@ class RemoteInterface {
   handleClientEnded(client) {
     if (client.idleTimer) clearTimeout(client.idleTimer);
     if (this.clientEndHandler) this.clientEndHandler(client);
+
+    // update player count:
+    this.playerCount--;
+    console.log(`Player disconnected. Total players: ${this.playerCount}`);
+
+
+    const leaveMessage = `Player ${client.remoteAddress} has left the game.`;
+    this.broadcast(leaveMessage);
   }
 
   bindHandlers(clientDataHandler, newClientHandler, clientEndHandler) {
